@@ -1,0 +1,127 @@
+/* 
+    Document   : Shopping
+    Created on : 3 Oct, 2013, 10:21:52 AM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.Fullpage {
+    width: 1260px;
+    height: 2000px;    
+}
+
+.Search {
+    width: 1260px;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.Search input {
+    width: 560px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 335px;
+    border: none;
+    float: left;
+}
+
+.Search button {
+    background-color: #3bc5dd;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    height: 32px;
+    cursor: pointer;
+    float: left;
+    
+}
+
+.Search button:hover {
+    background-color: #2ab4b5;
+}
+
+.Search table {
+    float: left; 
+    margin: 25px 0px 0px 50px;
+}
+
+.Menu {
+    width: 900px;
+    height: 60px;
+    background-color: cyan;
+    position: absolute;
+    margin: 70px 0px 0px 200px;
+}
+
+.Body {
+    width: 1260px;
+    height: 1000px;
+}
+
+.ImageBox {
+    margin: 50px 0px 0px 70px;
+    width: 690px;
+    height: 360px;
+    background-color: black;
+    float: left;
+    box-shadow: 0px 0px 8px 4px #888888;
+    background-repeat: no-repeat;
+}
+
+.ImageBox img {
+    width: 690px;
+    height: 320px;
+}
+
+.ImageSelect {
+    margin-top: -4px;
+    width: 230px;
+    height: 40px;
+    float: left;
+    background-color: #2ab4b5;
+    position: static;
+}
+
+.ImageSelect:hover {
+    background-color: whitesmoke;
+    border-bottom: yellow 5px solid; 
+    height: 35px;
+       
+}
+
+.Guarantee {
+    margin: 50px 0px 0px 20px;
+    width: 300px;
+    height: 420px;
+    background-color: black;
+    float: left;
+}
+
+.GauranteeDescription {
+    width: 300px;
+    height: 49px;
+    background-color: violet;
+    float: left;
+}
+
+.GauranteeImage {
+    width: 300px;
+    height: 50px;
+    background-color: yellow;
+    float: left;
+}
+
+.Footer {
+
+}
+
+
+
+
+
+

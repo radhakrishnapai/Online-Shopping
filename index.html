@@ -5,15 +5,14 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="Shopping.css" type="text/css"/>
-
+        <link rel="stylesheet" href="css/Shopping.css" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     </head>
     <body>        
-        <div class="fullpage">
-            <div class="search">
+        <div class="Fullpage">
+            <div class="Search">
                 <input type="text">
                 <button>SEARCH</button>
                 <table rules="cols">
@@ -22,7 +21,7 @@ and open the template in the editor.
                         <td>&nbsp;Login</td>
                     </tr>
                 </table>
-                <div class="menu">
+                <div id="slidetabs" class="Menu">
                     <table rules="cols">
                     <tr>
                         <td>Electronics&nbsp;</td>
@@ -37,8 +36,26 @@ and open the template in the editor.
                 </table>
                 </div>
             </div>       
-            <div class="body"></div>
-            <div class="footer"></div>
+            <div class="Body">
+                <div id="imagebox" class="ImageBox">
+                    <img id="special" src="images/specialoffers.jpg">
+                    <img id="i1" src="images/image1.jpg">
+                    <img id="i2" src="images/image2.jpg">
+                    <img id="i3" src="images/image3.jpg">
+                    <div id="image1" class="ImageSelect"></div>
+                    <div id="image2" class="ImageSelect"></div>
+                    <div id="image3" class="ImageSelect"></div>
+                </div>
+                <div class="Guarantee">
+                    <div class="GauranteeDescription"></div>
+                    <div class="GauranteeImage"></div>
+                    <div class="GauranteeImage"></div>
+                    <div class="GauranteeImage"></div>                    
+                </div>
+                
+            </div>
+            <div class="Footer"></div>
         </div>
+        <script src="js/shopping.js"></script>
     </body>
 </html>
