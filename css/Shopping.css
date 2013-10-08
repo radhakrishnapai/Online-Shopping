@@ -12,13 +12,19 @@ root {
 
 .Fullpage {
     width: 1260px;
-    height: 2000px;    
+    height: 2000px; 
 }
 
 .Search {
-    width: 1260px;
+    width: auto;
     height: 100px;
     background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1;
+    
 }
 
 .Search input {
@@ -49,45 +55,134 @@ root {
     float: left; 
     margin: 25px 0px 0px 50px;
 }
+.Search #log {
+    clear: both;
+    float: right;
+    margin-right: 74px;
+    font: normal 16px 'Segoe UI', Arial,Verdana;
+}
 
 .Menu {
     width: 900px;
-    height: 60px;
-    background-color: cyan;
+    height: 40px;
+    background-color: #1a3e52;
     position: absolute;
     margin: 70px 0px 0px 200px;
+    border-radius: 6px;
+    
+}
+
+.Menu table {
+    margin-top: 10px;
+    font-family: arial;
+    color: whitesmoke;
+    font-size: 80%;
+}
+
+.Menu img {
+    height: 10px;
+    width: 10px;
+}
+
+.Cart {
+    width: 179px;
+    height: 26px;
+    margin-top: 3px;
+    margin-right: 3px;
+    border-radius: 6px;
+    background-color: tomato;
+    float: right;
+    font-family: arial;
+    font-weight: 600;
+    text-align: center;
+    font-size: 100%;
+    padding-top: 8px;
+}
+
+.Menu #cart {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 67px;
+    font-weight: 600;
+    font-size: 100%;
+    padding-top: 0px;
+}
+
+.Cart:hover {
+    background-color: #fef416; 
+    cursor: pointer;
+    
 }
 
 .Body {
-    width: 1260px;
-    height: 1000px;
+    width: auto;
+    height: 2500px;
+    margin-top: 108px;    
 }
 
 .ImageBox {
     margin: 50px 0px 0px 70px;
-    width: 690px;
-    height: 360px;
+    width: 730px;
+    height: 340px;
     background-color: black;
     float: left;
     box-shadow: 0px 0px 8px 4px #888888;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.ImageBox img {
-    width: 690px;
-    height: 320px;
+.ImageBox #special {
+    width: auto;
+    height: 100%;
 }
 
-.ImageSelect {
-    margin-top: -4px;
-    width: 230px;
+.ImageSelect1 {
+    margin-left: 70px;
+    margin-top: 350px;
+    width: 243px;
     height: 40px;
     float: left;
     background-color: #2ab4b5;
-    position: static;
+    position: absolute;
 }
 
-.ImageSelect:hover {
+.ImageSelect1:hover {
+    background-color: whitesmoke;
+    border-bottom: yellow 5px solid; 
+    height: 35px;
+       
+}
+
+.ImageSelect2 {
+    margin-top: 350px;
+    margin-left: 313px;
+    width: 243px;
+    height: 40px;
+    float: left;
+    background-color: yellow;
+    position: absolute;
+}
+
+.ImageSelect2:hover {
+    background-color: whitesmoke;
+    border-bottom: yellow 5px solid; 
+    height: 35px;
+       
+}
+
+.ImageSelect3 {
+    margin-top: 350px;
+    margin-left: 556px;
+    width: 244px;
+    height: 40px;
+    float: left;
+    background-color: violet;
+    position: absolute;
+}
+
+.ImageSelect3:hover {
     background-color: whitesmoke;
     border-bottom: yellow 5px solid; 
     height: 35px;
@@ -95,30 +190,132 @@ root {
 }
 
 .Guarantee {
-    margin: 50px 0px 0px 20px;
-    width: 300px;
-    height: 420px;
-    background-color: black;
-    float: left;
+    margin: 50px 0px 0px 900px;
+    width: 301px;
+    height: 2000px;
+    position: absolute;
+    background-color: threedshadow;
 }
 
 .GauranteeDescription {
-    width: 300px;
-    height: 49px;
-    background-color: violet;
+    width: 298px;
+    height: 19px;
     float: left;
+    border: 1px solid #D0D0D0;
+    text-align: center;
+    padding: 20px 0px;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 95%;
 }
 
 .GauranteeImage {
-    width: 300px;
-    height: 50px;
-    background-color: yellow;
+    width: 120px;
+    height: 64px;
     float: left;
+    border-bottom: 1px solid #D0D0D0;
+    border-left: 1px solid #D0D0D0;
+    text-align: center;
+    padding: 10px 0px;
+    
+}
+
+.GauranteeImage #satisfaction {
+    width: 75px;
+    height: 52px;
+    
+}
+
+.GauranteeImage #return,#cash {
+    width: 60px;
+    height: 60px;
+}
+
+.GauranteeImage #original {
+    width: 75px;
+    height: 60px;
+}
+
+.GauranteeContent {
+    width: 178px;
+    height: 61px;
+    float: right;
+    border-bottom: 1px solid #D0D0D0;
+    border-right: 1px solid #D0D0D0;
+    padding-top: 23px;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 300;   
+    font-size: 85%;
+}
+
+.ImageList {
+    width: 765px;
+    height: 230px;
+    background-color: white;
+    float: left;
+    margin: 22px 0px 0px 70px;
+    position: relative;
+}
+
+.SubImage {
+    width: 225px;
+    height: 225px;
+    background-color: violet;
+    float: left;
+    margin-right: 28px;
+
+}
+
+.ImageList #clothing {
+    background: url("../images/clothing.jpg") center;
+    background-size: auto 225px;
+}
+
+.ImageList #footwear {
+    background: url("../images/footwear.jpg") center;
+    background-size: auto 225px;
+}
+
+.ImageList #watches {
+    background: url("../images/watches.jpg") center;
+    background-size: auto 225px;
+}
+
+.Caption {
+    float: bottom;
+    width: 215px;
+    height: 28px;
+    text-align: left;
+    background-color: #D0D0D0;
+    opacity: 0.7;
+    position:absolute;
+    bottom: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 85%;
+}
+
+.Caption img {
+     float: right;
+     padding-right: 8px;
 }
 
 .Footer {
-
+    background-color: #888888;
+    height: 300px;
+    width: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+
+
+
 
 
 

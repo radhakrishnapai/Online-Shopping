@@ -1,0 +1,68 @@
+.form-container {
+    padding: 30px 0 0;
+    font: normal 12px Verdana, Geneva, sans-serif;
+    width: 274px;
+    margin: 0 auto;
+    right: 0;
+    top: 70px;
+    position: fixed;
+    z-index:1;
+}
+
+h3 {
+    padding: 0 0 3px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 -1px #000;
+}
+form {
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 30px rgba(255,255,255,0.4);
+    -webkit-box-shadow: 0 0 30px rgba(255,255,255,0.4);
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 18px;
+    padding: 30px;
+    background: #111;
+    border: 1px solid #313131;
+    color: #D1D1D1;
+}
+.form-container .field { padding: 0 0 10px }
+.form-container .field input {
+    width: 200px;
+    text-shadow: 1px 1px #f4f4f4;
+    color: #666;
+    font: bold 11px Verdana, Geneva, sans-serif;
+    padding: 6px;
+    border: 1px solid #000;
+}
+.form-container .submit { text-align: right }
+.form-container button {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #444;
+    color: #fff;
+    text-shadow: 0 -1px #000;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    text-align: center;
+}
+.form-container button:hover { background: #555 }
+.form-container button:active {
+    background: #777;
+    position: relative;
+    top: 1px;
+    outline: none;
+}
+div.results { font-size: 11px }
+div.info { padding-bottom: 10px }
+.ui-widget-content {
+    border: 1px solid #000;
+    background-image: none;
+    -moz-box-shadow: 0 0 60px rgba(255,255,255,0.1);
+}
