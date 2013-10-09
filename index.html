@@ -25,7 +25,7 @@ and open the template in the editor.
                         <td id="login">&nbsp;Login</td>
                     </tr>
                 </table>
-                <div id="slidetabs" class="Menu">
+                <div class="Menu">
                     <table rules="cols">
                     <tr>
                         <td>Electronics&nbsp;<img src="images/down.png">&nbsp;&nbsp;</td>
@@ -43,22 +43,25 @@ and open the template in the editor.
                     </div>
                 </div>
             </div> 
-            <div class="form-container">
-                <form method="post" action="" id="form1">
+            <div id="logindiv" class="form-container">
+                <form id="form1">
                     <h3>Login</h3>
-                    <div class="field"><input type="text" name="username" title="Username"/></div>
-                    <div class="field"><input type="password" name="password" title="Password" /></div>
-                    <div class="submit"><button type="submit" value="Submit">Login</button></div>
+                    <div class="field"><input type="text" name="email" title="Email" placeholder="Email Address"/></div>
+                    <div class="field"><input type="password" name="password" title="Password" placeholder="Password"/></div>
+                    <div class="field"><label id="loginfailed">Login failed! Enter correct email & password!</label></div>
+                    <div class="submit"><button id="loginbutton" type="submit">Login</button></div>
                 </form>
             </div>
-            <div class="form-container">
-                <form method="post" action="" id="form2">
+            <div id="registerdiv" class="form-container">
+                <form id="form2">
                     <h3>Sign Up</h3>
-                    <div class="field"><input type="text" name="username" title="Username" /></div>
-                    <div class="field"><input type="text" name="email" title="Email Address" /></div>
-                    <div class="field"><input type="password" name="password" title="Password" id="password" /></div>
-                    <div class="field"><input type="password" name="confirmpassword" title="Confirm Password" /></div>
-                    <div class="submit"><button type="submit">Submit</button></div>
+                    <div class="field"><input type="text" name="username" title="Username" placeholder="User Name"/></div>
+                    <div class="field"><input type="text" name="email" title="Email Address" placeholder="Email Address"/></div>
+                    <div class="field"><input type="password" name="password" title="Password" id="password" placeholder="Password" /></div>
+                    <div class="field"><input type="password" name="confirmpassword" title="Confirm Password" placeholder="Confirm Password" /></div>
+                    <div class="field" id="registersuccess"><label >Registered successfully!</label></div>
+                    <div class="field" id="registerfailure"><label >Registration failed!</label></div>
+                    <div class="submit"><button id="registerbutton" type="submit">Submit</button></div>
                 </form>
             </div>
             <div class="Body">
@@ -77,41 +80,89 @@ and open the template in the editor.
                 
                 <div class="ImageList">
                     <div id="clothing" class="SubImage">
+                        <div class="blackbox"></div>
                         <div id="clothing1" class="Caption">CLOTHING
-                            <img src="images/right.png">
-                        </div>
+                            <img src="images/right.png"/>
+                        </div>     
                     </div>
                     <div id="footwear" class="SubImage">
-                        <div class="Caption">FOOTWEAR
+                        <div class="blackbox"></div>
+                        <div id="footwear1" class="Caption">FOOTWEAR
                             <img src="images/right.png">
                         </div>
                     </div>
                     <div id="watches" class="SubImage">
-                        <div class="Caption">WATCHES
+                        <div class="blackbox"></div>
+                        <div id ="watches1" class="Caption">WATCHES
                             <img src="images/right.png">
                         </div>
                     </div>
                 </div>
+                
+                
                 <div class="ImageList">
-                    <div class="SubImage"></div>
-                    <div class="SubImage"></div>
-                    <div class="SubImage"></div>
+                    <div id="mobiles" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="mobiles1" class="Caption">MOBILES
+                            <img src="images/right.png"/>
+                        </div>     
+                    </div>
+                    <div id="cameras" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="cameras1" class="Caption">CAMERAS
+                            <img src="images/right.png">
+                        </div>
+                    </div>
+                    <div id="kitchen" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id ="kitchen1" class="Caption">KITCHEN
+                            <img src="images/right.png">
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="ImageList">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div id="tablets" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="tablets1" class="Caption">TABLETS
+                            <img src="images/right.png"/>
+                        </div>     
+                    </div>
+                    <div id="living" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="living1" class="Caption">LIVING
+                            <img src="images/right.png">
+                        </div>
+                    </div>
+                    <div id="tvshows" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id ="tvshows1" class="Caption">TV SHOWS
+                            <img src="images/right.png">
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="ImageList">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div id="laptops" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="laptops1" class="Caption">LAPTOPS
+                            <img src="images/right.png"/>
+                        </div>     
+                    </div>
+                    <div id="music" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id="music1" class="Caption">MUSIC
+                            <img src="images/right.png">
+                        </div>
+                    </div>
+                    <div id="games" class="SubImage">
+                        <div class="blackbox"></div>
+                        <div id ="games1" class="Caption">GAMES
+                            <img src="images/right.png">
+                        </div>
+                    </div>
                 </div>
-                <div class="ImageList">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+
                 <div class="Guarantee">
                     <div class="GauranteeDescription">
                         SHOP WITH CONFIDENCE

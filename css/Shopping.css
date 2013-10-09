@@ -24,6 +24,7 @@ root {
     left: 0;
     right: 0;
     z-index:1;
+    background: #01162d;
     
 }
 
@@ -31,7 +32,7 @@ root {
     width: 560px;
     height: 30px;
     margin-top: 20px;
-    margin-left: 335px;
+    margin-left: 30%;
     border: none;
     float: left;
 }
@@ -55,11 +56,32 @@ root {
     float: left; 
     margin: 25px 0px 0px 50px;
 }
-.Search #log {
+
+#log {
+    color: #D1D1D1;
     clear: both;
     float: right;
     margin-right: 74px;
     font: normal 16px 'Segoe UI', Arial,Verdana;
+    margin-bottom: 25px;
+}
+
+#login:hover,#signup:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#loginfailed {
+    color: red;
+}
+
+#registersuccess {
+    color: #02bc06;
+}
+
+#registerfailure {
+    color: red;
 }
 
 .Menu {
@@ -67,7 +89,9 @@ root {
     height: 40px;
     background-color: #1a3e52;
     position: absolute;
-    margin: 70px 0px 0px 200px;
+    margin-top: 80px;
+    right: 80%;
+    left:20%;
     border-radius: 6px;
     
 }
@@ -119,7 +143,9 @@ root {
 .Body {
     width: auto;
     height: 2500px;
-    margin-top: 108px;    
+    margin-top: 108px; 
+/*    background: url("../images/onlineshopping.jpg") center;
+    background-size: 2500px auto;*/
 }
 
 .ImageBox {
@@ -194,7 +220,7 @@ root {
     width: 301px;
     height: 2000px;
     position: absolute;
-    background-color: threedshadow;
+    background-color: white;
 }
 
 .GauranteeDescription {
@@ -258,6 +284,10 @@ root {
     position: relative;
 }
 
+.ImageList img {
+    float: left;
+}
+
 .SubImage {
     width: 225px;
     height: 225px;
@@ -267,18 +297,75 @@ root {
 
 }
 
-.ImageList #clothing {
+.blackbox {
+    width: 195px;
+    height: 195px;
+    background-color: black;
+    z-index: 1;
+    opacity: .5;
+    color: white;
+    /*font-weight: 600;*/
+    font: normal 600 22px Verdana, Geneva, sans-serif;
+    padding: 15px;
+}
+
+#clothing {
     background: url("../images/clothing.jpg") center;
     background-size: auto 225px;
 }
 
-.ImageList #footwear {
+#footwear {
     background: url("../images/footwear.jpg") center;
     background-size: auto 225px;
 }
 
-.ImageList #watches {
+#watches {
     background: url("../images/watches.jpg") center;
+    background-size: auto 225px;
+}
+
+#mobiles {
+    background: url("../images/mobiles.jpg") center;
+    background-size: auto 225px;
+}
+
+#cameras {
+    background: url("../images/cameras.jpeg") center;
+    background-size: auto 225px;
+}
+
+#kitchen {
+    background: url("../images/kitchen.jpg") center;
+    background-size: auto 225px;
+}
+
+#tablets {
+    background: url("../images/tablets.jpeg") center;
+    background-size: auto 225px;
+}
+
+#living {
+    background: url("../images/living.jpeg") center;
+    background-size: auto 225px;
+}
+
+#tvshows {
+    background: url("../images/tvshows.jpg") center;
+    background-size: auto 225px;
+}
+
+#laptops {
+    background: url("../images/laptops.jpg") center;
+    background-size: auto 225px;
+}
+
+#music {
+    background: url("../images/music.jpg") center;
+    background-size: auto 225px;
+}
+
+#games {
+    background: url("../images/games.jpg") center;
     background-size: auto 225px;
 }
 

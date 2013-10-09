@@ -1,12 +1,11 @@
 .form-container {
-    padding: 30px 0 0;
     font: normal 12px Verdana, Geneva, sans-serif;
     width: 274px;
-    margin: 0 auto;
     right: 0;
-    top: 70px;
+    top: 100px;
     position: fixed;
     z-index:1;
+    
 }
 
 h3 {
