@@ -4,8 +4,8 @@
  */
 
 $(document).ready(function(){
-    $('#form1').hide();
-    $('#form2').hide();
+    $('#loginform').hide();
+    $('#registerform').hide();
     $('#special').show();
     $("#i1").hide();
     $("#i2").hide();
@@ -14,6 +14,56 @@ $(document).ready(function(){
     $("#registersuccess").hide();
     $("#loginfailed").hide();
     $(".blackbox").hide();
+    $("#loginform")[0].reset();
+    $("#registerform")[0].reset();
+    $("#electronics").hide();
+//    $("#DisplayBox").hide();
+    var mouse_is_inside_login = false;
+    var mouse_is_inside_register = false;
+
+
+//    $("#loginform").mouseleave(function() {
+//        mouse_is_inside_login = false;
+//    });
+//    
+//    $("#registerform").mouseleave(function() {
+//        mouse_is_inside_register = false;
+//    });
+//
+//
+//    $("html").mouseup(function() {
+//        if (mouse_is_inside_login === false) {
+//            $("#loginform").slideUp();
+//            mouse_is_inside_login = true;
+//        }
+//        if (mouse_is_inside_register === false) {
+//            $("#registerform").slideUp();
+//           mouse_is_inside_register = true;
+//        }
+//    });
+
+//    $(document).mouseup(function(e)
+//    {
+//        var container = $("#logindiv");
+//        if (!container.is(e.target) && container.has(e.target).length === 0)
+//        // if the target of the click isn't the container...
+//                 // ... nor a descendant of the container
+//        {
+//            container.slideUp();
+//        }
+//    });
+//    
+//    $(document).mouseup(function(e)
+//    {
+//        var container = $("#registerdiv");
+//        if (!container.is(e.target) && container.has(e.target).length === 0)
+//                // if the target of the click isn't the container...
+//                        // ... nor a descendant of the container
+//                        {
+//                            container.slideUp();
+//                        }
+//                        
+//            });
 //    $("#image1").mouseover(function(){
 //        $("#imagebox").css({
 //            "background-image": 'url("images/image1.jpg")'
@@ -35,7 +85,12 @@ $(document).ready(function(){
 //        });
 //    });
 
-    $("#form1").validate({
+//    $("html").click(function() {
+//       $("#registerform").slideUp(); 
+//       $("#loginform").slideUp();
+//    });
+
+    $("#loginform").validate({
         rules: {
             email: "required",
             password: "required"
@@ -45,23 +100,28 @@ $(document).ready(function(){
             password: "provide password"
         },
             submitHandler: function(){
-                var formVal = $("#form1").serialize();
+                var formVal = $("#loginform").serialize();
                         $.post("php/login.php", formVal).done(function(data) {
                             if (data === "fail") {
                                 $("#loginfailed").show();
+                                $("#loginform").delay("2000").slideUp();
                             }
                             else {
+                                $(this).hide();
+                                $("#loginform").slideUp();
+                                $("#loginform")[0].reset();
+                                $("#log").hide();
                                 alert(data);
                             }
                         });
             }
     });
     
-    $("#form2").validate({
+    $("#registerform").validate({
         rules: {
             username: {
                 required: true,
-                minlength: 5
+                minlength: 2
             },
             email: {
                 required: true,
@@ -98,16 +158,18 @@ $(document).ready(function(){
 
 
 
-            var formVal = $("#form2").serialize();
+            var formVal = $("#registerform").serialize();
             $.post("php/register.php", formVal).done(function(data) {
                 if (data) {
                     $("#registersuccess").show();
-                    $("#form2")[0].reset();
+                    $("#registerform")[0].reset();
                     $("#registerfailure").hide();
+                    $("#registerform").delay(2000).slideUp();
                 }
                 else {
                     $("#registersuccess").hide();
                     $("#registerfailure").show();
+                    $("#registerform").delay(2000).slideUp();
                 }
             });
 
@@ -117,14 +179,30 @@ $(document).ready(function(){
 
 
     $("#login").mouseover(function(){
-        $("#form2").fadeOut();
-        $("#form1").slideDown();
+        alert("hi");
+        $("#registerform").fadeOut();
+        $("#loginfailed").hide();
+        $("#loginform").slideDown();
     });
+//    $("#loginform input").click(function(){
+////        alert("hi");
+//        $("#registerform").fadeOut();
+//        $("#loginfailed").hide();
+//        $("#loginform").show();
+//    });
+    
     $("#signup").mouseover(function(){
-        $("#form2").val("");
-        $("#form1").fadeOut();
-        $("#form2").slideDown();
+        $("#registerform").val("");
+        $("#loginform").fadeOut();
+        $("#registerform").slideDown();
     });
+    $("#loginform,#registerform").mouseleave(function(){
+        $("#loginform").delay(1000).slideUp();
+        $("#registerform").delay(1000).slideUp();
+//        $("")
+    });
+  
+    
 
     $("#image1").mouseover(function(){
        $("#i1").fadeIn();
@@ -153,7 +231,7 @@ $(document).ready(function(){
     
     $("#clothing").mouseover(function(){
         $("#clothing1").hide();
-        $("#clothing .blackbox").show(function(){
+        $("#clothing .blackbox").show(500,function(){
             $(this).html(
                     "Men<br/>\n\
                      Women<br/>\n\
@@ -162,13 +240,14 @@ $(document).ready(function(){
         });
     });
     $("#clothing").mouseleave(function(){
+        $("#clothing .blackbox").stop();
         $("#clothing1").show();
         $("#clothing .blackbox").hide();
     });
     
      $("#footwear").mouseover(function(){
         $("#footwear1").hide();
-        $("#footwear .blackbox").show(function(){
+        $("#footwear .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -179,7 +258,7 @@ $(document).ready(function(){
     
     $("#watches").mouseover(function(){
         $("#watches1").hide();
-        $("#watches .blackbox").show(function(){
+        $("#watches .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -190,7 +269,7 @@ $(document).ready(function(){
     
     $("#mobiles").mouseover(function(){
         $("#mobiles1").hide();
-        $("#mobiles .blackbox").show(function(){
+        $("#mobiles .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -201,7 +280,7 @@ $(document).ready(function(){
     
     $("#cameras").mouseover(function(){
         $("#cameras1").hide();
-        $("#cameras .blackbox").show(function(){
+        $("#cameras .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -212,7 +291,7 @@ $(document).ready(function(){
     
     $("#kitchen").mouseover(function(){
         $("#kitchen1").hide();
-        $("#kitchen .blackbox").show(function(){
+        $("#kitchen .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -223,7 +302,7 @@ $(document).ready(function(){
     
     $("#tablets").mouseover(function(){
         $("#tablets1").hide();
-        $("#tablets .blackbox").show(function(){
+        $("#tablets .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -234,7 +313,7 @@ $(document).ready(function(){
     
     $("#living").mouseover(function(){
         $("#living1").hide();
-        $("#living .blackbox").show(function(){
+        $("#living .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -245,7 +324,7 @@ $(document).ready(function(){
     
     $("#tvshows").mouseover(function(){
         $("#tvshows1").hide();
-        $("#tvshows .blackbox").show(function(){
+        $("#tvshows .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -256,7 +335,7 @@ $(document).ready(function(){
     
     $("#laptops").mouseover(function(){
         $("#laptops1").hide();
-        $("#laptops .blackbox").show(function(){
+        $("#laptops .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -267,7 +346,7 @@ $(document).ready(function(){
     
     $("#music").mouseover(function(){
         $("#music1").hide();
-        $("#music .blackbox").show(function(){
+        $("#music .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -278,7 +357,7 @@ $(document).ready(function(){
     
     $("#games").mouseover(function(){
         $("#gamess1").hide();
-        $("#games .blackbox").show(function(){
+        $("#games .blackbox").show(500,function(){
             $(this).html("Hello</br>how are you");
         });
     });
@@ -287,7 +366,19 @@ $(document).ready(function(){
         $("#games .blackbox").hide();
     });
 
+// jquery for menu select
 
+    $("#menuelectronics").mouseover(function() {
+        $("#electronics").slideDown();
+    });
+    
+    $("#electronics").mouseleave(function() {
+        $("#electronics").delay(100).slideUp();
+    });
+    $("#clickmobiles").click(function() {
+       $("#DisplayBox").load("html/demo_test.txt");
+       alert("hello");
+    });
 
 
 });

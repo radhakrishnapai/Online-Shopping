@@ -9,26 +9,36 @@
 root { 
     display: block;
 }
+/** {
+   margin: 0px;
+   padding: 0px;
+}*/
 
 .Fullpage {
-    width: 1260px;
-    height: 2000px; 
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: 0px;
+       
 }
 
 .Search {
     width: auto;
     height: 100px;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index:1;
-    background: #01162d;
+    /*background: #01162d;*/
+    background: url("../images/header5.jpg") center;
+    background-size:  1650px auto;
     
 }
 
-.Search input {
+#searchinput {
     width: 560px;
     height: 30px;
     margin-top: 20px;
@@ -37,7 +47,7 @@ root {
     float: left;
 }
 
-.Search button {
+#searchbutton {
     background-color: #3bc5dd;
     color: white;
     border: none;
@@ -48,22 +58,21 @@ root {
     
 }
 
-.Search button:hover {
+#searchbutton:hover {
     background-color: #2ab4b5;
 }
 
 .Search table {
     float: left; 
-    margin: 25px 0px 0px 50px;
+    /*margin: 25px 0px 0px 50px;*/
 }
 
 #log {
     color: #D1D1D1;
     clear: both;
     float: right;
-    margin-right: 74px;
+    margin-right: 6%;
     font: normal 16px 'Segoe UI', Arial,Verdana;
-    margin-bottom: 25px;
 }
 
 #login:hover,#signup:hover {
@@ -85,27 +94,57 @@ root {
 }
 
 .Menu {
-    width: 900px;
+    width: 906px;
     height: 40px;
     background-color: #1a3e52;
-    position: absolute;
+/*    position: absolute;*/
     margin-top: 80px;
-    right: 80%;
-    left:20%;
+    margin-left: 20%;
+/*    right: 80%;
+    left:20%;*/
     border-radius: 6px;
     
 }
 
 .Menu table {
-    margin-top: 10px;
+    color: #F5F5F5;
     font-family: arial;
-    color: whitesmoke;
-    font-size: 80%;
+    font-size: 13px;
+    margin-left: 13px;
+    margin-top: 7px;
+    
 }
 
-.Menu img {
-    height: 10px;
-    width: 10px;
+#electronics {
+    font: 12px Verdana,Geneva,sans-serif;
+    position: fixed;
+    top: 100px;
+    width: 224px;
+    z-index: 1;
+    left: 20%;
+    top: 120px;
+    border-radius: 6px;
+    background-color: #1a3e52;
+}
+
+#menuelectronics:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#clickmobiles:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}   
+
+.Cart img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: -19px;
 }
 
 .Cart {
@@ -119,20 +158,10 @@ root {
     font-family: arial;
     font-weight: 600;
     text-align: center;
-    font-size: 100%;
     padding-top: 8px;
 }
 
-.Menu #cart {
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    position: absolute;
-    margin-left: 67px;
-    font-weight: 600;
-    font-size: 100%;
-    padding-top: 0px;
-}
+
 
 .Cart:hover {
     background-color: #fef416; 
@@ -143,20 +172,40 @@ root {
 .Body {
     width: auto;
     height: 2500px;
-    margin-top: 108px; 
+    margin-top: 100px; 
+    margin-left: 100px;
+    margin-right: 100px;        
+    background-color: tomato;
+    top: 20%;
+    padding: 80px 50px;
 /*    background: url("../images/onlineshopping.jpg") center;
     background-size: 2500px auto;*/
 }
 
+.Footer {
+    background-color: #888888;
+/*    height: 300px;
+    width: auto;*/
+    float: bottom;
+}
+
+.ImageContain {
+/*    width: 730px;
+    height: 390px;*/
+    float: left;
+}
+
 .ImageBox {
-    margin: 50px 0px 0px 70px;
+    /*margin: 50px 0px 0px 70px;*/
     width: 730px;
     height: 340px;
     background-color: black;
-    float: left;
+    float: top;
     box-shadow: 0px 0px 8px 4px #888888;
     background-repeat: no-repeat;
     overflow: hidden;
+    
+    /*margin-top:200px;*/
 }
 
 .ImageBox #special {
@@ -164,17 +213,23 @@ root {
     height: 100%;
 }
 
-.ImageSelect1 {
-    margin-left: 70px;
-    margin-top: 350px;
+/*.ImageBox img {
+    width: 730px;
+    height: 340px;
+}*/
+
+.ImageSelect {
+/*    margin-left: 70px;
+    margin-top: 350px;*/
     width: 243px;
     height: 40px;
     float: left;
     background-color: #2ab4b5;
-    position: absolute;
+    position: relative;
+    margin-top: -39px; 
 }
 
-.ImageSelect1:hover {
+.ImageSelect:hover {
     background-color: whitesmoke;
     border-bottom: yellow 5px solid; 
     height: 35px;
@@ -182,13 +237,13 @@ root {
 }
 
 .ImageSelect2 {
-    margin-top: 350px;
-    margin-left: 313px;
+/*    margin-top: 350px;
+    margin-left: 313px;*/
     width: 243px;
     height: 40px;
     float: left;
     background-color: yellow;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .ImageSelect2:hover {
@@ -199,13 +254,13 @@ root {
 }
 
 .ImageSelect3 {
-    margin-top: 350px;
-    margin-left: 556px;
+/*    margin-top: 350px;
+    margin-left: 556px;*/
     width: 244px;
     height: 40px;
     float: left;
     background-color: violet;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .ImageSelect3:hover {
@@ -216,16 +271,18 @@ root {
 }
 
 .Guarantee {
-    margin: 50px 0px 0px 900px;
+    /*margin: 50px 0px 0px 900px;*/
     width: 301px;
     height: 2000px;
-    position: absolute;
-    background-color: white;
+    position: relative;
+    float: right;
+    background-color: teal;
+    margin-top: -1106px;
 }
 
 .GauranteeDescription {
     width: 298px;
-    height: 19px;
+    /*height: 19px;*/
     float: left;
     border: 1px solid #D0D0D0;
     text-align: center;
@@ -275,13 +332,22 @@ root {
     font-size: 85%;
 }
 
+.DisplayBox {
+    float: bottom;
+    width: 761px;
+    
+    /*width: 730px;*/
+/*    padding-top:30px;*/
+}
+
 .ImageList {
-    width: 765px;
-    height: 230px;
+    /*width: 765px;*/
+    height: 225px;
     background-color: white;
     float: left;
-    margin: 22px 0px 0px 70px;
+    /*margin: 22px 0px 0px 70px;*/
     position: relative;
+    margin-top: 30px;
 }
 
 .ImageList img {
@@ -293,6 +359,8 @@ root {
     height: 225px;
     background-color: violet;
     float: left;
+    
+    /*padding-right: 18px;*/
     margin-right: 28px;
 
 }
@@ -372,12 +440,12 @@ root {
 .Caption {
     float: bottom;
     width: 215px;
-    height: 28px;
+    height: 33px;
     text-align: left;
     background-color: #D0D0D0;
     opacity: 0.7;
     position:absolute;
-    bottom: 5px;
+    bottom: 0;
     display: table-cell;
     vertical-align: middle;
     padding-top: 7px;
@@ -392,14 +460,7 @@ root {
      padding-right: 8px;
 }
 
-.Footer {
-    background-color: #888888;
-    height: 300px;
-    width: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+
 
 
 
