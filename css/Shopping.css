@@ -169,6 +169,8 @@ root {
     
 }
 
+
+
 .Body {
     width: auto;
     height: 2500px;
@@ -278,6 +280,7 @@ root {
     float: right;
     background-color: teal;
     margin-top: -1106px;
+    overflow: hidden;
 }
 
 .GauranteeDescription {
@@ -460,6 +463,8 @@ root {
      padding-right: 8px;
 }
 
+.display { height: 300px; width: auto;float:right;margin-right: 100px;}
+.display img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
 
 
 

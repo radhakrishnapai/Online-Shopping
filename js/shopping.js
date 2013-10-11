@@ -179,7 +179,7 @@ $(document).ready(function(){
 
 
     $("#login").mouseover(function(){
-        alert("hi");
+//        alert("hi");
         $("#registerform").fadeOut();
         $("#loginfailed").hide();
         $("#loginform").slideDown();
@@ -379,6 +379,13 @@ $(document).ready(function(){
        $("#DisplayBox").load("html/demo_test.txt");
        alert("hello");
     });
+
+
+    $('.display').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+    });
+    
+  //  $( ".selector" ).dialog({ buttons: [ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ] });
 
 
 });
