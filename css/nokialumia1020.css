@@ -1,0 +1,17 @@
+/* 
+    Document   : nokialumia1020
+    Created on : 15 Oct, 2013, 10:04:54 PM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+/*set a border on the images to prevent shifting*/
+ #gallery_01 img{border:2px solid white;}
+ 
+ /*Change the colour*/
+ .active img{border:2px solid #333 !important;}

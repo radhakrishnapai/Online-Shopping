@@ -16,10 +16,12 @@ $(document).ready(function(){
     $(".blackbox").hide();
     $("#loginform")[0].reset();
     $("#registerform")[0].reset();
-    $("#electronics").hide();
+    $("#listelectronics").hide();
 //    $("#DisplayBox").hide();
     var mouse_is_inside_login = false;
     var mouse_is_inside_register = false;
+    var highest_index = 0;
+    
 
 
 //    $("#loginform").mouseleave(function() {
@@ -248,7 +250,13 @@ $(document).ready(function(){
      $("#footwear").mouseover(function(){
         $("#footwear1").hide();
         $("#footwear .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Casual<br/>\n\
+                     Sports<br/>\n\
+                     Sandals<br/>\n\
+                     Flip Flops<br/>\n\
+                     Formal<br/>"
+        );
         });
     });
     $("#footwear").mouseleave(function(){
@@ -259,7 +267,13 @@ $(document).ready(function(){
     $("#watches").mouseover(function(){
         $("#watches1").hide();
         $("#watches .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Fastrack<br/>\n\
+                     Casio<br/>\n\
+                     Titan<br/>\n\
+                     Fossil<br/>\n\
+                     Maxima<br/>"
+        );
         });
     });
     $("#watches").mouseleave(function(){
@@ -270,18 +284,33 @@ $(document).ready(function(){
     $("#mobiles").mouseover(function(){
         $("#mobiles1").hide();
         $("#mobiles .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Samsung<br/>\n\
+                     Nokia<br/>\n\
+                     Micromax<br/>\n\
+                     Sony<br/>"
+        );
         });
     });
     $("#mobiles").mouseleave(function(){
         $("#mobiles1").show();
         $("#mobiles .blackbox").hide();
     });
+    $("#mobiles").click(function(){
+        $("#DisplayBox").hide();
+        $("#DisplayBox").toggle("shake");
+        $("#DisplayBox").load("html/demo_test.html");
+        });
     
     $("#cameras").mouseover(function(){
         $("#cameras1").hide();
         $("#cameras .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Canon<br/>\n\
+                     Nikon<br/>\n\
+                     Panasonic<br/>\n\
+                     Sony<br/>"
+        );
         });
     });
     $("#cameras").mouseleave(function(){
@@ -292,7 +321,12 @@ $(document).ready(function(){
     $("#kitchen").mouseover(function(){
         $("#kitchen1").hide();
         $("#kitchen .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Napkins<br/>\n\
+                     Aprons<br/>\n\
+                     Table Covers<br/>\n\
+                     Linen Sets<br/>"
+        );                 
         });
     });
     $("#kitchen").mouseleave(function(){
@@ -303,7 +337,10 @@ $(document).ready(function(){
     $("#tablets").mouseover(function(){
         $("#tablets1").hide();
         $("#tablets .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Ipad<br/>\n\
+                     Nexus7<br/>"
+        );  
         });
     });
     $("#tablets").mouseleave(function(){
@@ -314,7 +351,12 @@ $(document).ready(function(){
     $("#living").mouseover(function(){
         $("#living1").hide();
         $("#living .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Curtains<br/>\n\
+                     Carpet Rugs<br/>\n\
+                     Diwan Sets<br/>\n\
+                     Cushions<br/>"
+        );  
         });
     });
     $("#living").mouseleave(function(){
@@ -325,7 +367,12 @@ $(document).ready(function(){
     $("#tvshows").mouseover(function(){
         $("#tvshows1").hide();
         $("#tvshows .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Pre-Orders<br/>\n\
+                     DVDs<br/>\n\
+                     Blu-Rays<br/>\n\
+                     New Releases<br/>"
+        );  
         });
     });
     $("#tvshows").mouseleave(function(){
@@ -336,7 +383,12 @@ $(document).ready(function(){
     $("#laptops").mouseover(function(){
         $("#laptops1").hide();
         $("#laptops .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "HP<br/>\n\
+                     Dell<br/>\n\
+                     Lenovo<br/>\n\
+                     Asus<br/>"
+        );  
         });
     });
     $("#laptops").mouseleave(function(){
@@ -347,7 +399,12 @@ $(document).ready(function(){
     $("#music").mouseover(function(){
         $("#music1").hide();
         $("#music .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Bollywood<br/>\n\
+                     Vinyls<br/>\n\
+                     Devotional<br/>\n\
+                     Rock<br/>"
+        ); 
         });
     });
     $("#music").mouseleave(function(){
@@ -358,7 +415,12 @@ $(document).ready(function(){
     $("#games").mouseover(function(){
         $("#gamess1").hide();
         $("#games .blackbox").show(500,function(){
-            $(this).html("Hello</br>how are you");
+            $(this).html(
+                    "Xbox<br/>\n\
+                     PS3 Games<br/>\n\
+                     PC Games<br/>\n\
+                     Top Featured<br/>"
+        ); 
         });
     });
     $("#games").mouseleave(function(){
@@ -369,15 +431,29 @@ $(document).ready(function(){
 // jquery for menu select
 
     $("#menuelectronics").mouseover(function() {
-        $("#electronics").slideDown();
+        $("#listelectronics").slideDown();
     });
     
     $("#electronics").mouseleave(function() {
-        $("#electronics").delay(100).slideUp();
+        $("#listelectronics").delay(100).slideUp();
     });
     $("#clickmobiles").click(function() {
-       $("#DisplayBox").load("html/demo_test.txt");
-       alert("hello");
+       $("#DisplayBox").load("html/demo_test.html");
+    });
+
+    $("#nokiaLumia1020").click(function(){
+//        alert("hi");
+        $(".ImageContain").toggle("clip");
+        $("#DisplayBox").toggle("clip");
+        $("#DisplayBox").slideDown();
+        $("#DisplayBox").load("html/nokialumia1020.html"); 
+//            $(this).html(
+//                    "Fastrack<br/>\n\
+//                     Casio<br/>\n\
+//                     Titan<br/>\n\
+//                     Fossil<br/>\n\
+//                     Maxima<br/>"
+//        );
     });
 
 
@@ -385,7 +461,17 @@ $(document).ready(function(){
             fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
     });
     
-  //  $( ".selector" ).dialog({ buttons: [ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ] });
+//    $("#teleno").toggle( "pulsate" );
+    
+//    $( ".selector" ).dialog({ buttons: [ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ] });
 
-
+//    $("[z-index]").each(function() {
+//    if ($(this).attr("z-index") > highest_index) {
+//         highest_index = $(this).attr("z-index");
+//    }
+//    });
+//    $(".Search").attr("z-index", highest_index + 1);
+//    
+ 
+    
 });

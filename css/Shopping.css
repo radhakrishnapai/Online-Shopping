@@ -9,10 +9,11 @@
 root { 
     display: block;
 }
-/** {
+
+* {
    margin: 0px;
    padding: 0px;
-}*/
+}
 
 .Fullpage {
     left:0;
@@ -20,59 +21,64 @@ root {
     top:0;
     bottom: 0;
     margin: 0px;
-       
+    background: url("../images/body.jpg") center;
+    background-size: 100% 100%;
 }
 
 .Search {
-    width: auto;
+    width: 100%;
     height: 100px;
-    /*background-color: blueviolet;*/
+    z-index: 1;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index:1;
-    /*background: #01162d;*/
-    background: url("../images/header5.jpg") center;
-    background-size:  1650px auto;
-    
+    background-color: #005387;
+}
+
+#searchpattern {
+    width: 100%;
+    height: 100px;
+    background: url("../images/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 #searchinput {
-    width: 560px;
-    height: 30px;
+    width: 432px;
     margin-top: 20px;
-    margin-left: 30%;
+    margin-left: 28%;
     border: none;
     float: left;
+    padding: 7px;
+    z-index: 1;
 }
 
 #searchbutton {
     background-color: #3bc5dd;
     color: white;
-    border: none;
+    border-style: double;
     margin-top: 20px;
-    height: 32px;
+    padding: 4px;
     cursor: pointer;
     float: left;
     
 }
 
 #searchbutton:hover {
-    background-color: #2ab4b5;
-}
-
-.Search table {
-    float: left; 
-    /*margin: 25px 0px 0px 50px;*/
+    background-color: #090dcb;
 }
 
 #log {
     color: #D1D1D1;
     clear: both;
     float: right;
-    margin-right: 6%;
-    font: normal 16px 'Segoe UI', Arial,Verdana;
+    list-style: none;
+    margin-right: 7%;
+    font: normal 13px 'Segoe UI', Arial,Verdana;
+    margin-top: 1%;
+}
+
+#log li {
+    float: left;
 }
 
 #login:hover,#signup:hover {
@@ -94,38 +100,62 @@ root {
 }
 
 .Menu {
-    width: 906px;
-    height: 40px;
-    background-color: #1a3e52;
-/*    position: absolute;*/
-    margin-top: 80px;
-    margin-left: 20%;
-/*    right: 80%;
-    left:20%;*/
-    border-radius: 6px;
-    
+    /*background-color: #1a3e52;*/
+    border-radius: 6px 0px 0px 6px;
+    float: left;
+    margin-left: 17%;
+    margin-top: 25px;
+    background-color: #4096e5;
 }
 
-.Menu table {
+.Menu ul {
     color: #F5F5F5;
     font-family: arial;
-    font-size: 13px;
-    margin-left: 13px;
-    margin-top: 7px;
-    
+    font-size: 12px;
+
+    padding-bottom: 26px;
+    padding-left: 16px;
+    padding-top: 3px;
+    list-style: none;    
 }
 
-#electronics {
-    font: 12px Verdana,Geneva,sans-serif;
-    position: fixed;
-    top: 100px;
-    width: 224px;
-    z-index: 1;
-    left: 20%;
-    top: 120px;
-    border-radius: 6px;
-    background-color: #1a3e52;
+.Menu ul li {
+    padding-left: 5px;
+    float: left;
 }
+
+#listelectronics {
+    margin-left: 17%;
+}
+
+.List {
+    padding: 30px;
+    background: #1a3e52;;
+    /*border: 1px solid #313131;*/
+    border-radius: 6px;
+    color: #D1D1D1;
+    font: normal 16px Verdana, Geneva, sans-serif;
+    width: auto;
+    left: 0;
+    top: 105px;
+    position: fixed;
+    z-index:1;
+}
+
+.List h3 {
+    padding: 0 0 3px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 -1px #000;
+}
+
+.List label {
+    padding: 6px;
+    font: bold 11px Verdana, Geneva, sans-serif;
+}
+
 
 #menuelectronics:hover {
     color: whitesmoke;
@@ -141,24 +171,23 @@ root {
 }   
 
 .Cart img {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    margin-left: -19px;
+    height: 18px;
+    width: 18px;
+    padding-top: 3px;
+    
+
 }
 
 .Cart {
-    width: 179px;
-    height: 26px;
-    margin-top: 3px;
-    margin-right: 3px;
-    border-radius: 6px;
+
+    border-radius: 0px 6px 6px 0px;
     background-color: tomato;
-    float: right;
+    float: left;
     font-family: arial;
     font-weight: 600;
-    text-align: center;
-    padding-top: 8px;
+    font-size: 15px;
+    padding: 0 29px 4px 20px;
+    margin-top: 25px;
 }
 
 
@@ -172,70 +201,73 @@ root {
 
 
 .Body {
-    width: auto;
-    height: 2500px;
-    margin-top: 100px; 
-    margin-left: 100px;
-    margin-right: 100px;        
-    background-color: tomato;
-    top: 20%;
-    padding: 80px 50px;
-/*    background: url("../images/onlineshopping.jpg") center;
-    background-size: 2500px auto;*/
+    width: 1001px;
+    margin-left: auto;
+    margin-right: auto;        
+    background-color: whitesmoke    ;
+    padding-top: 158px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+    box-shadow: 0px 0px 8px 4px #888888;
+    z-index: 2;
+    /*padding: 80px 50px;*/
+
 }
 
-.Footer {
-    background-color: #888888;
-/*    height: 300px;
-    width: auto;*/
-    float: bottom;
-}
+
 
 .ImageContain {
-/*    width: 730px;
-    height: 390px;*/
+    width: 675px;
+    height: 299px;
     float: left;
+    box-shadow: 0px 0px 8px 4px #888888;
+    overflow: hidden;
 }
 
 .ImageBox {
-    /*margin: 50px 0px 0px 70px;*/
-    width: 730px;
-    height: 340px;
+    width: 675px;
+    height: 299px;
     background-color: black;
-    float: top;
-    box-shadow: 0px 0px 8px 4px #888888;
+    float: left;
     background-repeat: no-repeat;
     overflow: hidden;
-    
-    /*margin-top:200px;*/
 }
 
-.ImageBox #special {
-    width: auto;
-    height: 100%;
+.ImageBox img {
+    width: 675px;
+    height: 260px;;
 }
 
-/*.ImageBox img {
-    width: 730px;
-    height: 340px;
+/*.ImageBox #special {
+    width: 675px;
+    height: 260px;
+    overflow: hidden;
 }*/
 
 .ImageSelect {
-/*    margin-left: 70px;
-    margin-top: 350px;*/
-    width: 243px;
+    width: 197px;
     height: 40px;
+    padding-top: 7px;
+    padding-left: 25px;
     float: left;
-    background-color: #2ab4b5;
-    position: relative;
+    background-color: #333;
+    color: white;
     margin-top: -39px; 
+    border-left: 1px solid #D0D0D0;
+    border-right: 1px solid #D0D0D0;
+    
 }
 
 .ImageSelect:hover {
     background-color: whitesmoke;
+    border: none;
     border-bottom: yellow 5px solid; 
-    height: 35px;
-       
+    cursor: pointer;
+    color: #333;
+    width: 200px;
+    height: 29px;
 }
 
 .ImageSelect2 {
@@ -273,19 +305,54 @@ root {
 }
 
 .Guarantee {
-    /*margin: 50px 0px 0px 900px;*/
-    width: 301px;
-    height: 2000px;
-    position: relative;
+    /*width: 306px;*/
+    /*position: relative;*/
     float: right;
-    background-color: teal;
-    margin-top: -1106px;
-    overflow: hidden;
+/*    padding-left: 30px;
+    padding-right: 30px;*/
+    background-color: white;
+    width: 300px;
 }
 
-.GauranteeDescription {
+.Guarantee ul{
+    list-style: none;
+}
+
+.Guarantee li {
+    border: 1px solid #D0D0D0;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight: 300;   
+    font-size: 85%;
+}
+.Guarantee li img {
+    vertical-align: middle;
+}
+#gauranteedescription {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 95%;
+}
+
+#satisfaction {
+    width: 75px;
+    height: 52px;
+}
+
+#return,#cash {
+    width: 60px;
+    height: 60px;
+}
+
+#original {
+    width: 75px;
+    height: 60px;
+}
+
+/*.GauranteeDescription {
     width: 298px;
-    /*height: 19px;*/
+    height: 19px;
     float: left;
     border: 1px solid #D0D0D0;
     text-align: center;
@@ -306,22 +373,6 @@ root {
     
 }
 
-.GauranteeImage #satisfaction {
-    width: 75px;
-    height: 52px;
-    
-}
-
-.GauranteeImage #return,#cash {
-    width: 60px;
-    height: 60px;
-}
-
-.GauranteeImage #original {
-    width: 75px;
-    height: 60px;
-}
-
 .GauranteeContent {
     width: 178px;
     height: 61px;
@@ -333,7 +384,7 @@ root {
     font-family: sans-serif;
     font-weight: 300;   
     font-size: 85%;
-}
+}*/
 
 .DisplayBox {
     float: bottom;
@@ -345,8 +396,8 @@ root {
 
 .ImageList {
     /*width: 765px;*/
-    height: 225px;
-    background-color: white;
+    height: 200px;
+    /*background-color: ;*/
     float: left;
     /*margin: 22px 0px 0px 70px;*/
     position: relative;
@@ -358,19 +409,21 @@ root {
 }
 
 .SubImage {
-    width: 225px;
-    height: 225px;
+    width: 200px;
+    height: 200px;
     background-color: violet;
     float: left;
-    
-    /*padding-right: 18px;*/
-    margin-right: 28px;
+    margin-left: 12px;
+    margin-right: 13px;
+}
 
+.SubImage:hover {
+    cursor: pointer;
 }
 
 .blackbox {
-    width: 195px;
-    height: 195px;
+    width: 171px;
+    height: 171px;
     background-color: black;
     z-index: 1;
     opacity: .5;
@@ -382,67 +435,75 @@ root {
 
 #clothing {
     background: url("../images/clothing.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #footwear {
     background: url("../images/footwear.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #watches {
     background: url("../images/watches.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #mobiles {
     background: url("../images/mobiles.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #cameras {
     background: url("../images/cameras.jpeg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #kitchen {
     background: url("../images/kitchen.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #tablets {
     background: url("../images/tablets.jpeg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #living {
     background: url("../images/living.jpeg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #tvshows {
     background: url("../images/tvshows.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #laptops {
     background: url("../images/laptops.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #music {
     background: url("../images/music.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
 
 #games {
     background: url("../images/games.jpg") center;
-    background-size: auto 225px;
+    background-size: auto 200px;
 }
+
+#nokiaLumia1020 {
+    background: url("../images/nokialumia10201.jpeg") center;
+    background-repeat: no-repeat;
+    background-size: auto 200px;
+}
+
+
 
 .Caption {
     float: bottom;
-    width: 215px;
+    width: 190px;
     height: 33px;
     text-align: left;
     background-color: #D0D0D0;
@@ -463,15 +524,80 @@ root {
      padding-right: 8px;
 }
 
-.display { height: 300px; width: auto;float:right;margin-right: 100px;}
-.display img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+.display { 
+    height: auto;
+    width: 275px;
+    float:right;
+    margin-top: 10px;
+}
 
+.display img { 
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    z-index: -1;
+}
 
+.Marquee {
+    float: right;
+    width: 300px;
+    color: red;
+    
+}
 
+.Footer {
+    width: 100%;
+    background-color: #051a26;
+    overflow: auto;
+    float: bottom;
+}
 
+.FooterContent {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 1048px;
+    background-color: #051a26;
+    overflow: auto;
+/*    bottom: 0;*/
+    
+}
 
+.subfoot1{
+    float:left;
+    color: #838388;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: white;
+        padding: 20px 30px;
 
+}
 
+.subfoot1 img{
+    width: 32px;
+    height: 32px;
+}
 
+.subfoot2{
+    float:left;
+    font-size:20px;
+    color:white;
+    padding: 20px 27px;
+    text-align: justify;
+}
 
-
+.subfoot2 ul{
+    float: left;
+    list-style-image:url("../images/arrow.png");
+    font-size: 80%;
+    color: #838388;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+.subfoot3{
+    float:left;
+    color: #838388;
+    text-align: left;
+    font-family: sans-serif;
+    padding: 20px 27px;
+}
