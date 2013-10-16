@@ -1,0 +1,659 @@
+/* 
+    Document   : Shopping
+    Created on : 3 Oct, 2013, 10:21:52 AM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+.Fullpage {
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: 0px;
+    background: url("../images/body.jpg") center;
+    background-size: 100% 100%;
+}
+
+.Search {
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    position: fixed;
+    background-color: #005387;
+}
+
+#searchpattern {
+    width: 100%;
+    height: 100px;
+    background: url("../images/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#searchinput {
+    width: 432px;
+    margin-top: 20px;
+    margin-left: 28%;
+    border: none;
+    float: left;
+    padding: 7px;
+    z-index: 1;
+}
+
+#searchbutton {
+    background-color: #3bc5dd;
+    color: white;
+    border-style: double;
+    margin-top: 20px;
+    padding: 4px;
+    cursor: pointer;
+    float: left;
+    
+}
+
+#searchbutton:hover {
+    background-color: #090dcb;
+}
+
+#log {
+    color: #D1D1D1;
+    clear: both;
+    float: right;
+    list-style: none;
+    margin-right: 7%;
+    font: normal 13px 'Segoe UI', Arial,Verdana;
+    margin-top: 1%;
+}
+
+#log li {
+    float: left;
+}
+
+#signup:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+#signout:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#login:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#loginname {
+    color: #02bc06;
+}
+
+#loginfailed {
+    color: red;
+}
+
+#registersuccess {
+    color: #02bc06;
+}
+
+#registerfailure {
+    color: red;
+}
+
+.Menu {
+    /*background-color: #1a3e52;*/
+    border-radius: 6px 0px 0px 6px;
+    float: left;
+    margin-left: 17%;
+    margin-top: 25px;
+    background-color: #4096e5;
+}
+
+.Menu ul {
+    color: #F5F5F5;
+    font-family: arial;
+    font-size: 12px;
+
+    padding-bottom: 26px;
+    padding-left: 16px;
+    padding-top: 3px;
+    list-style: none;    
+}
+
+.Menu ul li {
+    padding-left: 5px;
+    float: left;
+}
+
+#listelectronics {
+    margin-left: 17%;
+}
+
+.List {
+    padding: 30px;
+    background: #1a3e52;;
+    /*border: 1px solid #313131;*/
+    border-radius: 6px;
+    color: #D1D1D1;
+    font: normal 16px Verdana, Geneva, sans-serif;
+    width: auto;
+    left: 0;
+    top: 105px;
+    position: fixed;
+    z-index:1;
+}
+
+.List h3 {
+    padding: 0 0 3px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 -1px #000;
+}
+
+.List label {
+    padding: 6px;
+    font: bold 11px Verdana, Geneva, sans-serif;
+}
+
+
+#menuelectronics:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#clickmobiles:hover {
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}   
+
+.Cart img {
+    height: 18px;
+    width: 18px;
+    padding-top: 3px;
+    
+
+}
+
+.Cart {
+
+    border-radius: 0px 6px 6px 0px;
+    background-color: tomato;
+    float: left;
+    font-family: arial;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 29px 4px 20px;
+    margin-top: 25px;
+}
+
+.Cart:hover {
+    background-color: #fef416; 
+    cursor: pointer;
+    
+}
+
+.Body {
+    width: 1001px;
+    margin-left: auto;
+    margin-right: auto;        
+    background-color: whitesmoke    ;
+    padding-top: 158px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+    box-shadow: 0px 0px 8px 4px #888888;
+    z-index: 2;
+    color: #000;
+    /*padding: 80px 50px;*/
+
+}
+
+.ImageContain {
+    width: 675px;
+    height: 299px;
+    float: left;
+    box-shadow: 0px 0px 8px 4px #888888;
+    overflow: hidden;
+}
+
+.ImageBox {
+    width: 675px;
+    height: 299px;
+    background-color: black;
+    float: left;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.ImageBox img {
+    width: 675px;
+    height: 260px;;
+}
+
+/*.ImageBox #special {
+    width: 675px;
+    height: 260px;
+    overflow: hidden;
+}*/
+
+.ImageSelect {
+    width: 197px;
+    height: 40px;
+    padding-top: 7px;
+    padding-left: 25px;
+    float: left;
+    background-color: #333;
+    color: white;
+    margin-top: -39px; 
+    border-left: 1px solid #D0D0D0;
+    border-right: 1px solid #D0D0D0;
+    
+}
+
+.ImageSelect:hover {
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: yellow 5px solid; 
+    cursor: pointer;
+    color: #333;
+    width: 200px;
+    height: 29px;
+}
+
+.ImageSelect2 {
+/*    margin-top: 350px;
+    margin-left: 313px;*/
+    width: 243px;
+    height: 40px;
+    float: left;
+    background-color: yellow;
+    /*position: absolute;*/
+}
+
+.ImageSelect2:hover {
+    background-color: whitesmoke;
+    border-bottom: yellow 5px solid; 
+    height: 35px;
+       
+}
+
+.ImageSelect3 {
+/*    margin-top: 350px;
+    margin-left: 556px;*/
+    width: 244px;
+    height: 40px;
+    float: left;
+    background-color: violet;
+    /*position: absolute;*/
+}
+
+.ImageSelect3:hover {
+    background-color: whitesmoke;
+    border-bottom: yellow 5px solid; 
+    height: 35px;
+       
+}
+
+.Guarantee {
+    /*width: 306px;*/
+    /*position: relative;*/
+    float: right;
+/*    padding-left: 30px;
+    padding-right: 30px;*/
+    background-color: white;
+    width: 300px;
+}
+
+.Guarantee ul{
+    list-style: none;
+}
+
+.Guarantee li {
+    border: 1px solid #D0D0D0;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight: 300;   
+    font-size: 85%;
+}
+.Guarantee li img {
+    vertical-align: middle;
+}
+#gauranteedescription {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 95%;
+}
+
+#satisfaction {
+    width: 75px;
+    height: 52px;
+}
+
+#return,#cash {
+    width: 60px;
+    height: 60px;
+}
+
+#original {
+    width: 75px;
+    height: 60px;
+}
+
+/*.GauranteeDescription {
+    width: 298px;
+    height: 19px;
+    float: left;
+    border: 1px solid #D0D0D0;
+    text-align: center;
+    padding: 20px 0px;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 95%;
+}
+
+.GauranteeImage {
+    width: 120px;
+    height: 64px;
+    float: left;
+    border-bottom: 1px solid #D0D0D0;
+    border-left: 1px solid #D0D0D0;
+    text-align: center;
+    padding: 10px 0px;
+    
+}
+
+.GauranteeContent {
+    width: 178px;
+    height: 61px;
+    float: right;
+    border-bottom: 1px solid #D0D0D0;
+    border-right: 1px solid #D0D0D0;
+    padding-top: 23px;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 300;   
+    font-size: 85%;
+}*/
+
+.DisplayBox {
+    float: bottom;
+    width: 761px;
+    
+    /*width: 730px;*/
+/*    padding-top:30px;*/
+}
+
+.ImageList {
+    /*width: 765px;*/
+    height: 200px;
+    /*background-color: ;*/
+    float: left;
+    /*margin: 22px 0px 0px 70px;*/
+    position: relative;
+    margin-top: 30px;
+}
+
+.ImageList img {
+    float: left;
+}
+
+.SubImage {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    float: left;
+    margin-left: 12px;
+    margin-right: 13px;
+}
+
+.SubImage:hover {
+    cursor: pointer;
+}
+
+.blackbox {
+    width: 171px;
+    height: 171px;
+    background-color: black;
+    z-index: 1;
+    opacity: .5;
+    color: white;
+    /*font-weight: 600;*/
+    font: normal 600 22px Verdana, Geneva, sans-serif;
+    padding: 15px;
+}
+
+#clothing {
+    background: url("../images/clothing.jpg") center;
+    background-size: auto 200px;
+}
+
+#footwear {
+    background: url("../images/footwear.jpg") center;
+    background-size: auto 200px;
+}
+
+#watches {
+    background: url("../images/watches.jpg") center;
+    background-size: auto 200px;
+}
+
+#mobiles {
+    background: url("../images/mobiles.jpg") center;
+    background-size: auto 200px;
+}
+
+#cameras {
+    background: url("../images/cameras.jpeg") center;
+    background-size: auto 200px;
+}
+
+#kitchen {
+    background: url("../images/kitchen.jpg") center;
+    background-size: auto 200px;
+}
+
+#tablets {
+    background: url("../images/tablets.jpeg") center;
+    background-size: auto 200px;
+}
+
+#living {
+    background: url("../images/living.jpeg") center;
+    background-size: auto 200px;
+}
+
+#tvshows {
+    background: url("../images/tvshows.jpg") center;
+    background-size: auto 200px;
+}
+
+#laptops {
+    background: url("../images/laptops.jpg") center;
+    background-size: auto 200px;
+}
+
+#music {
+    background: url("../images/music.jpg") center;
+    background-size: auto 200px;
+}
+
+#games {
+    background: url("../images/games.jpg") center;
+    background-size: auto 200px;
+}
+
+#phpnokiaLumia1020,#nokiaLumia1020 {
+    background: url("../images/nokialumia10201.jpeg") center;
+    background-repeat: no-repeat;
+    background-size: auto 200px;
+}   
+
+#phpsamsunggalaxy3,#samsunggalaxy3 {
+    background: url("../images/samsunggalaxy2.jpeg") center;
+    background-repeat: no-repeat;
+    background-size: auto 200px;
+}   
+
+
+.Caption {
+    float: bottom;
+    width: 190px;
+    height: 33px;
+    text-align: left;
+    background-color: #D0D0D0;
+    opacity: 0.7;
+    position:absolute;
+    bottom: 0;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 85%;
+}
+
+.Caption img {
+     float: right;
+     padding-right: 8px;
+}
+
+.HeadingCaption {
+    width: auto;
+    height: 33px;
+    text-align: center;
+    background-color: #D0D0D0;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 7px 250px;
+    font-family: sans-serif;
+    font-weight: 600;   
+    font-size: 85%;
+}
+
+.NewSubImage {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    margin-left: 12px;
+    margin-top: 40px;
+}
+
+.CartButton {
+    border: none;
+    border-radius: 6px;
+    background-color: silver;
+    font-weight: 600;
+    font-size: 85%;
+    font: normal 16px Verdana, Geneva, sans-serif;
+    width: 134px;
+    height: 41px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.CartButton:hover{
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.display { 
+    height: auto;
+    width: 275px;
+    float:right;
+    margin-top: 10px;
+}
+
+.display img { 
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    z-index: -1;
+}
+
+.Marquee {
+    float: right;
+    width: 300px;
+    color: red;
+    
+}
+
+.Footer {
+    width: 100%;
+    background-color: #051a26;
+    overflow: auto;
+    float: bottom;
+}
+
+.FooterContent {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 1048px;
+    background-color: #051a26;
+    overflow: auto;
+/*    bottom: 0;*/
+    
+}
+
+.subfoot1{
+    float:left;
+    color: #838388;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: white;
+        padding: 20px 30px;
+
+}
+
+.subfoot1 img{
+    width: 32px;
+    height: 32px;
+}
+
+.subfoot2{
+    float:left;
+    font-size:20px;
+    color:white;
+    padding: 20px 27px;
+    text-align: justify;
+}
+
+.subfoot2 ul{
+    float: left;
+    list-style-image:url("../images/arrow.png");
+    font-size: 80%;
+    color: #838388;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+.subfoot3{
+    float:left;
+    color: #838388;
+    text-align: left;
+    font-family: sans-serif;
+    padding: 20px 27px;
+}
